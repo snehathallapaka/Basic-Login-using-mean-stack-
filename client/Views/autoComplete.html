@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Place Autocomplete</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+        #map {
+            height: 400px;
+            width: 50%;
+            alignment: center;
+        }
+    </style>
+</head>
+<body>
+<input id="pac-input" type="text"
+       placeholder="Enter a location">
+<div id="map"></div>
+<div id="infowindow-content">
+    <img src="" width="16" height="16" id="place-icon">
+    <span id="place-name"  class="title"></span><br>
+    <span id="place-address"></span>
+</div>
+<script>
+    function initMap() {
+        var options = {
+//            types: ['(cities)'],
+            componentRestrictions: {country: "in"}
+        };
+        var input = document.getElementById('pac-input');
+        var autocomplete = new google.maps.places.Autocomplete(input,options);
+            autocomplete.addListener('place_changed', function() {
+            var place = autocomplete.getPlace();
+                showMarker(place.geometry.location);
+        });
+    }
+
+    function showMarker(location) {
+        console.log("In Marker");
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 17,
+            center: location
+        });
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map
+        });
+        marker.setVisible(true);
+    }
+    setTimeout(function() {
+        initMap();
+    },300);
+//    setTimeout(function() {
+//        showMarker({lat:17.3850,lng:78.4867});
+//    },300);
+
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8rndJ_Sd8fe90JnWxmZrFZJNyKpFe02Y&libraries=places"></script>
+</body>
+</html>

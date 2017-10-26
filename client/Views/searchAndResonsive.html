@@ -1,0 +1,49 @@
+
+<div ng-controller="dataTableCtrl">
+
+    <table cellpadding="3" cellspacing="0" border="0" style="width: 67%; margin: 0 auto 2em auto;">
+        <thead>
+        <tr>
+            <th>Search text</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr id="filter_col1" data-column="0">
+            <td>Column - Name</td>
+            <td align="center"><input type="text" class="column_filter" id="col0_filter"></td>
+            <td align="center"><input type="checkbox" class="column_filter" id="col0_regex"></td>
+            <td align="center"><input type="checkbox" class="column_filter" id="col0_smart" checked="checked"></td>
+        </tr>
+        <tr id="filter_col2" data-column="1">
+            <td>Column - Age</td>
+            <td align="center"><input type="text" class="column_filter" id="col1_filter"></td>
+            <td align="center"><input type="checkbox" class="column_filter" id="col1_regex"></td>
+            <td align="center"><input type="checkbox" class="column_filter" id="col1_smart" checked="checked"></td>
+        </tr>
+        <tr id="filter_col3" data-column="2">
+            <td>Column - Test</td>
+            <td align="center"><input type="text" class="column_filter" id="col2_filter"></td>
+            <td align="center"><input type="checkbox" class="column_filter" id="col2_regex"></td>
+            <td align="center"><input type="checkbox" class="column_filter" id="col2_smart" checked="checked"></td>
+        </tr>
+        </tbody>
+    </table>
+    <table id="example" class="display responsive nowrap" cellspacing="0" width="100%">
+
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>test</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat='item in items'>
+            <td>{{item.name}}</td>
+            <td>{{item.age}}</td>
+            <td>
+                {{item.testField}}
+            </td>
+        </tr>></tbody>
+    </table>
+</div>

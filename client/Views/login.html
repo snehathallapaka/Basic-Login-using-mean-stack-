@@ -1,0 +1,9 @@
+<div ng-controller="loginCtrl">
+    <p>Welcome !</p>
+    <form name="loginForm">
+        User Name: <input type="text" ng-model="userData.name">
+        Password: <input type="password" ng-model="userData.password">
+        <button type="submit" ng-click="verifyCredentials()" >Login !</button>
+    </form>
+
+</div>

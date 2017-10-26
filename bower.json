@@ -1,0 +1,33 @@
+{
+  "name": "first",
+  "description": "",
+  "main": "index.js",
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.5",
+    "angular-route": "^1.6.5",
+    "angular-cookies": "^1.6.5",
+    "angular-moment-picker": "moment-picker#^0.10.1",
+    "datatables.net": "^1.10.15",
+    "datatables.net-dt": "^3.2.2",
+    "jquery": "^3.2.1",
+    "datatables.net-responsive": "^2.1.1",
+    "datatables.net-responsive-dt": "^2.1.1",
+    "angular-star-rating": "^0.0.2",
+    "underscore": "^1.8.3",
+    "international-phone-number": "^0.0.16",
+    "ng-intl-tel-input": "^2.0.0"
+  },
+  "resolutions": {
+    "angular": "1.6.5"
+  }
+}
